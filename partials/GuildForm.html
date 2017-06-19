@@ -1,0 +1,74 @@
+<h3>Guild Information</h3>
+
+<!-- <label>Guild Name</label>
+<input type="text" name="GuildName">
+<label>Website</label>
+<input type="url" name="GuildWebsite">
+<label>Play Style</label>
+<
+<input type="radio" name="">
+<input type="radio" name="">
+<input type="radio" name="">
+<input type="radio" name="">
+<label>Description</label>
+<input type="textarea" name="Description">
+<label>Banner Image</label>
+<input type="url" name="BannerImage">
+ -->
+<div class="row">
+	<div class="col-md-5 col-md-offset-1">
+		<div class="input-group">
+  			<span class="input-group-addon" id="GuildNameForm">Guild Name</span>
+  			<input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="account.name">
+  			
+		</div>
+	</div>
+	<div class="col-md-5">
+		<div class="input-group">
+			<span class="input-group-addon" id="GuildWebForm">Guild Website</span>
+  			<input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="account.website">
+		</div>
+	</div>
+
+</div>
+
+<div class="input-group col-md-10 col-md-offset-1">
+  <span class="input-group-addon" id="GuildDescriptionForm">Guild Description</span>
+  <textarea class="form-control" rows="5" id="DescriptionInput" ng-model="account.description"></textarea>
+</div>
+<h5>Server Info</h5>
+<p>Fill out the details on the servers your guild operates.</p>
+<div class="col-md-10 col-md-offset-1 container-fluid">
+	<div class="input-group">
+		<span class="input-group-addon" id="GuildTSForm">Teamspeak Server</span>
+  		<input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="account.ts">
+  		<span class="input-group-addon" id="GuildDiscordForm">Discord Server</span>
+  		<input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="account.discord">
+  		<span class="input-group-addon" id="GuildWebForm">Game Server</span>
+  		<input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="account.gameServer">
+	</div>
+</div>
+<div class="button" ngf-select="upload($file)">Upload on file select</div>
+<!-- <input type="file" ng-model="account.file" custom-on-change="uploadFile()" id="fileButton"/> -->
+<!-- <button id="fileUpload" ng-click="uploadImage()">Upload Banner</button> -->
+<progress value="0" max="100" id="uploader">0%</progress>
+<button ng-click="submitGuild()">Submit</button>
+<!-- Name
+Steam ID
+Description
+Website
+Server
+Teamspeak
+Discord
+Banner Image
+Logo Image?
+Vote Count*
+Average Rank*?
+Most Active Days*?
+Age Limit
+Video Link
+Steam Group
+Twitch
+Twitter
+Facebook
+Active Days? -->

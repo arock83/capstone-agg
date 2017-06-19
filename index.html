@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="GuildApp">
+<head>
+	<meta charset="utf-8">
+	<title>Website Name</title>
+	<link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="lib/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div id="master-wrapper" class="container-fluid">
+		<header id="master-header" ng-include="'partials/Navbar.html'" ng-controller="NavCtrl">
+			<!-- Navbar goes here -->
+		</header>
+		<div ng-view>
+			
+		</div>
+		<footer id="master-footer" class="container-fluid">
+			<p>Copyright &copy; 2017 Aggregate Guild Gaming</p>
+		</footer>
+	</div>
+
+
+
+<!-- JaveScript Links -->
+  <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./lib/node_modules/angular/angular.js"></script>
+  <script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="./lib/node_modules/firebase/firebase.js"></script>
+  <script type="text/javascript" src="./lib/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+  <!-- <script type="text/javascript" src="./lib/node_modules/angular-file-upload/dist/angular-file-upload.min.js"></script> -->
+
+  <script type="text/javascript" src="./app/app.js"></script>
+  <script type="text/javascript" src="./values/FBcreds.js"></script>
+  <!-- CONTROLLERS -->
+  <script type="text/javascript" src="./app/controllers/NavCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/LoginCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/PreviewCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/GuildFormCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/GuildListCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/AccountCtrl.js"></script>
+  <script type="text/javascript" src="./app/controllers/GuildEditCtrl.js"></script>
+  <!-- FACTORIES -->
+  <script type="text/javascript" src="./app/factories/GuildAuthFactory.js">
+  </script>
+  <script type="text/javascript" src="./app/factories/GuildFactory.js"></script>
+  <script type="text/javascript" src="./app/factories/SteamFactory.js"></script>
+  <script type="text/javascript" src="./app/factories/GameFactory.js"></script>
+  <script type="text/javascript" src="./app/factories/VoteFactory.js"></script>
+  <!-- DIRECTIVES -->
+  <!-- <script type="text/javascript" src="./app/directives/CustomChange.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,92 @@
+header,
+section,
+aside,
+footer {
+	border: 2px solid black;
+}
+
+#main-content {
+	margin-top: 2%;
+}
+
+#master-wrapper {
+	padding: 0 5%;
+}
+
+#master-footer {
+	margin: 2% 0 0 0;
+	text-align: center;
+	padding: 2px;
+}
+#master-footer p {
+	margin-bottom: 3px;
+}
+
+#master-header {
+	padding: 1% 1% 0 1%;
+}
+
+.clanCard {
+	margin-top: 1%;
+	padding: 1%;
+	width: 100%;
+}
+
+.ranker {
+	margin: 0;
+	padding: 2px;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.clan-title {
+	margin: 0 auto;
+	padding: 2px;
+}
+
+.bannerImage {
+	border: 2px dashed red;
+}
+.bannerImage img {
+	width:100%;
+}
+
+#resources h3 {
+	text-align: center;
+	margin: 2% auto;
+}
+
+.cardHeader {
+	width:100%;
+	margin: 0;
+}
+
+.input-group {
+	margin-top: 20px;
+}
+
+
+/* Font Size Media Queries */
+html {
+  font-size: 14px;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 16px;
+  }
+  
+}
+
+@include media-breakpoint-up(md) {
+  	html {
+    	font-size: 20px;
+  	}
+	
+}
+@include media-breakpoint-up(lg) {
+  	html {
+    	font-size: 28px;
+  	}
+  	
+}
