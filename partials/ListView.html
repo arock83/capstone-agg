@@ -1,5 +1,5 @@
 
-<div ng-repeat="guild in guilds" class="clanCard container">
+<div ng-repeat="guild in guilds | orderBy: '-votes'" class="clanCard container">
 	<header class="row cardHeader">
 		<p class="ranker col-md-1">I</p>
 		<h3 class="clan-title col-md-11">{{guild.name}}</h3>

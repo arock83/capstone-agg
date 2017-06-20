@@ -1,0 +1,7 @@
+<h2>Vote for your Cohort</h2>
+
+<select id="guildSelector">
+	<option ng-repeat="guild in guilds" value="{{guild.accountKey}}">{{guild.name}}</option>
+</select>
+
+<button ng-click="castVote()">Vote</button>

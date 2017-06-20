@@ -13,7 +13,8 @@ app.controller("GuildFormCtrl", function($scope, $http, GuildAuthFactory, GuildF
 		discord: "",
 		gameServer: "",
 		image: "",
-		accountKey: accountID
+		accountKey: accountID,
+                votes: 0
 	};
 
 	$scope.submitGuild = function () {

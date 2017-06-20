@@ -55,9 +55,13 @@ app.config(function($routeProvider) {
 		resolve: {AccountAuth}
 	})
 	.when("/account/edit", {
-		templateUrl: "partials/GuildForm",
+		templateUrl: "partials/GuildForm.html",
 		controller: "GuildEditCtrl",
 		resolve: {AccountAuth}
+	})
+	.when("/vote", {
+		templateUrl: "partials/Vote.html",
+		controller: "VoteCtrl"
 	})
 	.otherwise("/");
 });
