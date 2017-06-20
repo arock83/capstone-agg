@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("AccountCtrl", function($scope, GuildFactory, GuildAuthFactory, $window) {
+app.controller("AccountCtrl", function($scope, GuildFactory, GuildAuthFactory, $window, $route) {
 
 	var accountID = GuildAuthFactory.GetAccountId();
 
@@ -8,6 +8,8 @@ app.controller("AccountCtrl", function($scope, GuildFactory, GuildAuthFactory, $
 	GuildFactory.GetOneGuild(accountID)
 	.then((data) => {
 		$scope.account = data;
+		$scope.$apply();
+
 	});
 
 	$scope.preview = () => {
@@ -22,4 +24,6 @@ app.controller("AccountCtrl", function($scope, GuildFactory, GuildAuthFactory, $
 	$scope.edit = () => {
 		$window.location.href = "#!/account/edit";
 	};
+
+	
 });

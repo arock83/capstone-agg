@@ -51,7 +51,9 @@
 <div class="button" ngf-select="upload($file)">Upload on file select</div>
 <!-- <input type="file" ng-model="account.file" custom-on-change="uploadFile()" id="fileButton"/> -->
 <!-- <button id="fileUpload" ng-click="uploadImage()">Upload Banner</button> -->
-<progress value="0" max="100" id="uploader">0%</progress>
+<input type="file" onchange="angular.element(this).scope().fileChanged(this)" id="fileInput"/>
+<button ng-click="upload()">Upload</button>
+<img ng-src="{{account.image}}">
 <button ng-click="submitGuild()">Submit</button>
 <!-- Name
 Steam ID
