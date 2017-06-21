@@ -63,6 +63,10 @@ app.config(function($routeProvider) {
 		templateUrl: "partials/Vote.html",
 		controller: "VoteCtrl"
 	})
+	.when("/steam/login", {
+		templateUrl : "partials/SteamPage.html",
+		controller: "SteamCtrl"
+	})
 	.otherwise("/");
 });
 

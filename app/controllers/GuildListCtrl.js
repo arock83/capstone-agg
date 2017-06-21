@@ -12,7 +12,7 @@ app.controller("GuildListCtrl", function($scope, GuildFactory) {
 				GuildArray.push(data[item]);
 			}
 			$scope.guilds = GuildArray;
-			$scope.$apply();
+			// $scope.$apply();
 		});
 	};
 

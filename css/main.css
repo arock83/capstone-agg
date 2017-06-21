@@ -2,7 +2,7 @@ header,
 section,
 aside,
 footer {
-	border: 2px solid black;
+	
 }
 
 #main-content {
@@ -23,7 +23,7 @@ footer {
 }
 
 #master-header {
-	padding: 1% 1% 0 1%;
+
 }
 
 .clanCard {
@@ -45,12 +45,15 @@ footer {
 }
 
 .bannerImage {
-	border: 2px dashed red;
+	padding-left: 5%;
 }
 .bannerImage img {
+	width:90%;
+
+}
+.navbar {
 	width:100%;
 }
-
 #resources h3 {
 	text-align: center;
 	margin: 2% auto;

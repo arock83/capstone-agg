@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("VoteCtrl", function($scope, GuildFactory, $window){
+app.controller("VoteCtrl", function($scope, GuildFactory, $window, SteamFactory){
 
 
 $scope.castVote = () => {
@@ -31,6 +31,11 @@ $scope.GetGuilds = () => {
 	.then((data) => {
 		$scope.guilds = data;
 	});
+};
+
+
+$scope.logIn = () => {
+	SteamFactory.login();
 };
 
 $scope.GetGuilds();
