@@ -2,16 +2,20 @@
 <div ng-repeat="guild in guilds | orderBy: '-votes'" class="clanCard container">
 	<header class="row cardHeader">
 		<p class="ranker col-md-1">{{$index + 1}}</p>
-		<h3 class="clan-title col-md-11">{{guild.name}}</h3>
+		<h2 class="clan-title col-md-11"><strong>{{guild.name}}</strong></h3>
 	</header>
+	<hr class="bannerBreak">
 	<div class="bannerImage">
 		<img ng-src="{{guild.image}}" rel="bannerImage" alt="banner">
 	</div>
 	<div>
 		<p>{{guild.description}}</p>
 	</div>
-	<footer>
-		<p>Links go in here</p>
+
+	<footer class="card-footer">
+		<a class="hyperlink" href="{{guild.website}}"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Website</a>
+		<a class="hyperlink" href="{{guild.teamspeak}}"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span> Teamspeak</a>
+		<a class="hyperlink" href="{{guild.discord}}"><span class="glyphicon glyphicon-headphones" aria-hidden="true"></span> Discord</a>
 	</footer>
 </div>
 <!-- <div class="clanCard container">

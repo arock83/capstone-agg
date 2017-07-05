@@ -11,11 +11,7 @@ var GetOneGuild = (guildID) => {
 		$http.get(`${FBcreds.databaseURL}/guilds.json`)
 		.then((returnedObj) => {
 			var dataObj = returnedObj.data;
-			// console.log(returnedObj.data);
 			for(var prop in dataObj) {
-				// console.log(dataObj[prop]);
-				// console.log(dataObj[prop].accountKey);
-				// console.log(guildID);
 				if(dataObj[prop].accountKey == guildID) {
 				 	OneGuild = dataObj[prop];
 				 	OneGuild.dataKey = prop;

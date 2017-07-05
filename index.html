@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html ng-app="GuildApp">
+<html ng-app="GuildApp" class="background-fix">
 <head>
 	<meta charset="utf-8">
-	<title>Website Name</title>
+	<title>Cohort Wars Clans</title>
 	<link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="lib/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
+  <link rel="shortcut icon" type="image/x-icon" href="app/data/favicon.ico"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body>
+<body class="background-fix">
 	<div id="master-wrapper" class="container-fluid">
 		<header id="master-header" ng-include="'partials/Navbar.html'" ng-controller="NavCtrl">
 			<!-- Navbar goes here -->
@@ -15,10 +16,13 @@
 		<div ng-view>
 			
 		</div>
-		<footer id="master-footer" class="container-fluid">
+    <div class="spacer">
+      
+    </div>
+		<footer id="master-footer" class="container-fluid clanCard">
 			<p>Copyright &copy; 2017 Aggregate Guild Gaming</p>
 		</footer>
-	</div>
+	
 
 
 
@@ -33,7 +37,7 @@
   <!-- <script type="text/javascript" src="./lib/node_modules/firebase/firebase-storage.js"></script> -->
 <!--   <script type="text/javascript" src="./lib/node_modules/firebase/firebase-app.js"></script>
  -->
-  <script src="//wzrd.in/standalone/blob-util@latest"></script>
+  <!-- <script src="//wzrd.in/standalone/blob-util@latest"></script> -->
   <script type="text/javascript" src="./app/app.js"></script>
   <script type="text/javascript" src="./values/FBcreds.js"></script>
   <!-- CONTROLLERS -->
@@ -55,5 +59,6 @@
   <script type="text/javascript" src="./app/factories/VoteFactory.js"></script>
   <!-- DIRECTIVES -->
   <!-- <script type="text/javascript" src="./app/directives/CustomChange.js"></script> -->
+  </div>
 </body>
 </html>

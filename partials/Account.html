@@ -1,22 +1,81 @@
+<div class="clanCard row">
+	<div class="col-md-5 col-md-offset-1">
+		<h2>Guild Account Details</h2>
+		<p><strong>Name:</strong></p>
+		<p>{{account.name}}</p>
+		<p><strong>Description</strong></p>
+		<p>{{account.description}}</p>
+		<p><strong>Website</strong></p>
+		<p>{{account.website}}</p>
+	</div>
+	<div class="col-md-5 col-md-offset-1">
+		<h2>Server Info</h2>
+		<p><strong>Game Server</strong></p>
+		<p>{{account.gameServer}}</p>
+		<p><strong>Teamspeak Server</strong></p>
+		<p>{{account.ts}}</p>
+		<p><strong>Discord Server</strong></p>
+		<p>{{account.discord}}</p>
+	</div>
+		<div class="row">
+		<div class="col-md-5 col-md-offset-1">
+			<h3><strong>Playstyle</strong></h3>
+			<div class="radio">
+			  <label>
+			    <input type="radio" ng-model="account.playStyle" value="hardcore" name="playStyle" disabled>
+			    Hardcore
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" ng-model="account.playStyle" value="serious" name="playStyle" disabled>
+			    Serious
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" ng-model="account.playStyle" value="casual" name="playStyle" disabled>
+			    Casual
+			  </label>
+			</div>
+		</div>
+		<div class="col-md-5 col-md-offset-1">
+			<h3><strong>Event Timezones</strong></h3>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="" ng-model="account.westNATZ" disabled>
+			    Western American Time Zones
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="" ng-model="account.eastNATZ" disabled>
+			    Eastern American Times Zones
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="" ng-model="account.westEUTZ" disabled>
+			    Western European Times Zones
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="" ng-model="account.eastEUTZ" disabled>
+			    Eastern European Times Zones
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="" ng-model="account.oceanicTZ" disabled>
+			    Oceanic Time Zones
+			  </label>
+			</div>
+		</div>
+	</div>
+	<img ng-src="{{account.image}}">
 
-<h3>Guild Account Details</h3>
-<p><strong>Name:</strong></p>
-<p>{{account.name}}</p>
-<p><strong>Description</strong></p>
-<p>{{account.description}}</p>
-<p><strong>Website</strong></p>
-<p>{{account.website}}</p>
-
-<h4>Server Info</h4>
-<p><strong>Game Server</strong></p>
-<p>{{account.gameServer}}</p>
-<p><strong>Teamspeak Server</strong></p>
-<p>{{account.ts}}</p>
-<p><strong>Discord Server</strong></p>
-<p>{{account.discord}}</p>
-
-<img ng-src="{{account.image}}">
-
-<button ng-click="preview()">Preview</button>
-<button ng-click="edit()">Edit</button>
-<button ng-click="logout()">Log out</button>
+	<button ng-click="preview()">Preview</button>
+	<button ng-click="edit()">Edit</button>
+	<button ng-click="logout()">Log out</button>
+<div>

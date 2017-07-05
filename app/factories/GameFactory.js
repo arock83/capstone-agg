@@ -7,11 +7,12 @@ app.factory("GameFactory", function($q, $http){
 		primaryColor: "",
 		secondaryColor: "",
 		backgroundImage: "",
-		logo: ""
+		logo: "",
+		favicon: ""
 	};
 
 	var logoUrl = firebase.storage().ref(`CohortWarsLogo.png`).getDownloadURL();
-	
+	GameData.favicon = firebase.storage().ref(`favicon.ico`).getDownloadURL();
 
 
 	var GetGameInfo = () => {

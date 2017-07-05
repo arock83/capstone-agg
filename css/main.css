@@ -1,60 +1,132 @@
-header,
-section,
-aside,
-footer {
+body {
+	background-image: url("../app/data/rome.jpg");
+	background-repeat: no-repeat;
+	background-position: fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+	z-index: 1;
+
+}
+html {
 	
+	background-image: url("../app/data/rome.jpg");
+	background-repeat: no-repeat;
+	background-position: fixed;
+	background-size: cover;
+	-webkit-background-size: cover;
+}
+.background-fix {
+	background-color: rgba(109, 127, 127, 0.75);
 }
 
-#main-content {
+hr {
+	color: black;
+	border-color:black;
+	background-color:black;
+}
+.main-content {
 	margin-top: 2%;
 }
 
 #master-wrapper {
 	padding: 0 5%;
+	background-color: rgba(109, 127, 127, 0.75);
 }
 
 #master-footer {
-	margin: 2% 0 0 0;
+	margin: 5% 0 0 0;
 	text-align: center;
 	padding: 2px;
+	width:100%;
+	position: fixed;
+	bottom: 0;
+	left:0;
 }
 #master-footer p {
 	margin-bottom: 3px;
 }
-
+/*Navbar Styeling*/
 #master-header {
+	font-size: 16pt;
+	text-shadow: 1px 1px #ae0001;
 
 }
+.navbar-default {
+	background-color: rgba(173, 26, 24, 0.90);
+	border: 1px solid black;
+	box-shadow: 1px 1px 2px black;
+}
+.navbar-brand p {
+	font-size: 16pt;
+	color: black;
+}
+.navbar-default .navbar-nav li a {
+	color: black;
+}
+.navbar-nav li:hover {
+	color: #5e1d1f;
+}
+
+
+
+
 
 .clanCard {
-	margin-top: 1%;
+	margin-top: 5px;
 	padding: 1%;
 	width: 100%;
+	background-color: rgba(173, 26, 24, 0.90);
+	border-radius: 10px;
+	box-shadow: 1px 1px 2px black;
+	text-shadow: 1px 1px #ae0001;
+	margin-bottom: 20px;
+
 }
 
 .ranker {
 	margin: 0;
 	padding: 2px;
-	text-align: center;
-	font-size: 1.5em;
+	text-align: left;
+	font-size: 2em;
 }
 
 .clan-title {
-	margin: 0 auto;
+	margin-top: 0;
 	padding: 2px;
-}
+	text-align: center;
+	font-size: 2em;
+	padding-right: 10%;
+	margin-bottom: 1%;
 
+}
+.bannerBreak {
+	margin: 1% 5%;
+}
 .bannerImage {
 	padding-left: 5%;
 }
 .bannerImage img {
 	width:90%;
+	border-radius: 10px;
+	box-shadow: 1px 1px 2px black;
 
 }
 .navbar {
 	width:100%;
 }
-#resources h3 {
+.dropdown-menu {
+	background-color: rgba(173, 26, 24, 0.90);
+}
+.aside {
+	background-color: rgba(173, 26, 24, 0.90);
+	border-radius: 10px;
+	box-shadow: 1px 1px 2px black;
+	width: 100%;
+	text-shadow: 1px 1px #ae0001;
+	margin-top: 5px;
+	padding: 2% 5%;
+}
+.aside h3 {
 	text-align: center;
 	margin: 2% auto;
 }
@@ -67,7 +139,76 @@ footer {
 .input-group {
 	margin-top: 20px;
 }
+.card-footer a {
+	margin: 2px 40px;
+	font-size: 12pt;
+}
+.card-footer {
+	text-align: center;
+}
 
+
+
+.pageHeader {
+	text-align: center;
+}
+
+#guildSignUp {
+	font-size: 1.5em;
+
+}
+
+#guildSignUp h1 {
+	text-align: center;
+}
+.signUpFields {
+	text-align: center;
+}
+
+.hyperlink {
+	color: black;
+	margin: 1% auto;
+}
+
+.hyperlink:hover {
+	color: #5e1d1f;
+}
+.spacer {
+	height: 900px;
+}
+.listView {
+	padding-left:20px;
+	padding-right: 20px;
+	margin-top: 10px;
+}
+
+.formfix {
+	text-shadow: none;
+}
+.checkbox,
+.radio {
+	font-size: 16pt;
+}
+.imagePreview {
+	margin:5% 0;
+	font-size: 16pt;
+	border-radius: 5px;
+}
+.labelBorder {
+	border: 1px solid black;
+}
+.greyout {
+	background-color: #6E7F75;
+	color: white;
+	border: 1px solid black;
+}
+
+.submitBtn {
+	padding: 5px 20px;
+	margin-left: 40%;
+	border-radius: 5px;
+	font-size: 18pt;
+}
 
 /* Font Size Media Queries */
 html {

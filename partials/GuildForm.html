@@ -1,4 +1,5 @@
-<h3>Guild Information</h3>
+<div class="clanCard">
+	<h2><strong>Clan Information</strong></h2>
 
 <!-- <label>Guild Name</label>
 <input type="text" name="GuildName">
@@ -15,46 +16,115 @@
 <label>Banner Image</label>
 <input type="url" name="BannerImage">
  -->
-<div class="row">
-	<div class="col-md-5 col-md-offset-1">
+	<div class="row">
+		<div class="col-md-5 col-md-offset-1">
+			<div class="input-group">
+	  			<span class="input-group-addon formfix labelBorder" id="GuildNameForm">Clan Name</span>
+	  			<input type="text" class="form-control greyout" aria-describedby="basic-addon1" ng-model="account.name">
+	  			
+			</div>
+		</div>
+		<div class="col-md-5">
+			<div class="input-group">
+				<span class="input-group-addon formfix labelBorder" id="GuildWebForm">Clan Website</span>
+	  			<input type="text" class="form-control greyout" aria-describedby="basic-addon1" ng-model="account.website">
+			</div>
+		</div>
+
+	</div>
+
+	<div class="input-group col-md-10 col-md-offset-1">
+	  <span class="input-group-addon formfix labelBorder" id="GuildDescriptionForm">Clan Description</span>
+	  <textarea class="form-control greyout" rows="5" id="DescriptionInput" ng-model="account.description"></textarea>
+	</div>
+	<h3><strong>Server Info</strong></h3>
+	<p>Fill out the details on the servers your guild operates.</p>
+	<div class="col-md-10 col-md-offset-1 container-fluid">
 		<div class="input-group">
-  			<span class="input-group-addon" id="GuildNameForm">Guild Name</span>
-  			<input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="account.name">
-  			
+			<span class="input-group-addon formfix labelBorder" id="GuildTSForm">Teamspeak Server</span>
+	  		<input type="text" class="form-control greyout" aria-describedby="basic-addon1" ng-model="account.ts">
+	  		<span class="input-group-addon formfix labelBorder" id="GuildDiscordForm">Discord Server</span>
+	  		<input type="text" class="form-control greyout" aria-describedby="basic-addon1" ng-model="account.discord">
+	  		<span class="input-group-addon formfix labelBorder" id="GuildWebForm">Game Server</span>
+	  		<input type="text" class="form-control greyout" aria-describedby="basic-addon1" ng-model="account.gameServer">
 		</div>
 	</div>
-	<div class="col-md-5">
-		<div class="input-group">
-			<span class="input-group-addon" id="GuildWebForm">Guild Website</span>
-  			<input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="account.website">
+	<!-- <div class="button" ngf-select="upload($file)">Upload on file select</div> -->
+	<!-- <input type="file" ng-model="account.file" custom-on-change="uploadFile()" id="fileButton"/> -->
+	<!-- <button id="fileUpload" ng-click="uploadImage()">Upload Banner</button> -->
+	<div class="row">
+		<div class="col-md-5 col-md-offset-1">
+			<h3><strong>Playstyle</strong></h3>
+			<div class="radio">
+			  <label>
+			    <input type="radio" ng-model="account.playStyle" value="hardcore" name="playStyle">
+			    Hardcore
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" ng-model="account.playStyle" value="serious" name="playStyle">
+			    Serious
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" ng-model="account.playStyle" value="casual" name="playStyle">
+			    Casual
+			  </label>
+			</div>
+		</div>
+		<div class="col-md-5 col-md-offset-1">
+			<h3><strong>Event Timezones</strong></h3>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="" ng-model="account.westNATZ">
+			    Western American Time Zones
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="" ng-model="account.eastNATZ">
+			    Eastern American Times Zones
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="" ng-model="account.westEUTZ">
+			    Western European Times Zones
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="" ng-model="account.eastEUTZ">
+			    Eastern European Times Zones
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="" ng-model="account.oceanicTZ">
+			    Oceanic Time Zones
+			  </label>
+			</div>
 		</div>
 	</div>
+	<div  class="row">
+		<div class="col-md-5 col-md-offset-1">
+			<input class="imagePreview" type="file" onchange="angular.element(this).scope().fileChanged(this)" id="fileInput"/>
+			<button class="imagePreview" ng-click="upload()">Upload</button>
+		</div>
+		<div class="col-md-5 col-md-offset-1">
+			<h4>Image Preview</h4>
+			<img ng-src="{{account.image}}">
+		</div>
+		
+	</div>
+	<button class="submitBtn" ng-click="submitGuild()">Submit</button>
 
 </div>
 
-<div class="input-group col-md-10 col-md-offset-1">
-  <span class="input-group-addon" id="GuildDescriptionForm">Guild Description</span>
-  <textarea class="form-control" rows="5" id="DescriptionInput" ng-model="account.description"></textarea>
-</div>
-<h5>Server Info</h5>
-<p>Fill out the details on the servers your guild operates.</p>
-<div class="col-md-10 col-md-offset-1 container-fluid">
-	<div class="input-group">
-		<span class="input-group-addon" id="GuildTSForm">Teamspeak Server</span>
-  		<input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="account.ts">
-  		<span class="input-group-addon" id="GuildDiscordForm">Discord Server</span>
-  		<input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="account.discord">
-  		<span class="input-group-addon" id="GuildWebForm">Game Server</span>
-  		<input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="account.gameServer">
-	</div>
-</div>
-<div class="button" ngf-select="upload($file)">Upload on file select</div>
-<!-- <input type="file" ng-model="account.file" custom-on-change="uploadFile()" id="fileButton"/> -->
-<!-- <button id="fileUpload" ng-click="uploadImage()">Upload Banner</button> -->
-<input type="file" onchange="angular.element(this).scope().fileChanged(this)" id="fileInput"/>
-<button ng-click="upload()">Upload</button>
-<img ng-src="{{account.image}}">
-<button ng-click="submitGuild()">Submit</button>
+
+
 <!-- Name
 Steam ID
 Description
